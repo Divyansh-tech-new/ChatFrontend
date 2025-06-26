@@ -1,8 +1,8 @@
 import { io } from 'socket.io-client';
 
-const socket = io('http://localhost:3000/', {
-    transports: ['websocket'], // Use WebSocket protocol
-    withCredentials: true, // Allow credentials
+const socket = io(import.meta.env.VITE_HOST, {
+    transports: ['websocket'],
+    withCredentials: true,
 });
 
 export default socket;
