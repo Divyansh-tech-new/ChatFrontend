@@ -1,0 +1,39 @@
+/* Remove most custom styles, keep only utility overrides */
+body {
+  @apply overflow-hidden;
+}
+
+* {
+  @apply box-border;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Responsive tweaks for the auth container */
+@media (max-width: 1280px) {
+  .auth-container {
+    @apply w-[95vw] max-w-[95vw] h-[90vh];
+  }
+}
+@media (max-width: 1024px) {
+  .auth-container {
+    @apply w-[98vw] max-w-[98vw] h-[90vh];
+  }
+}
+@media (max-width: 768px) {
+  .auth-container {
+    @apply w-full max-w-full h-auto;
+  }
+}
+@media (max-width: 480px) {
+  .auth-container {
+    @apply w-full max-w-full h-auto;
+  }
+}
